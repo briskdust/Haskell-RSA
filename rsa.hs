@@ -1,3 +1,5 @@
+module RSA where
+
 prime :: Integer -> Bool
 prime n = n > 1 && all (\x -> rem n x /= 0) xs
   where

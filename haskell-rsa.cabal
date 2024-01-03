@@ -1,0 +1,21 @@
+name:                  haskell-rsa
+version:               0.1.0
+cabal-version:         >=1.10
+build-type:            Simple
+synopsis:              A simple RSA implementation in Haskell
+description:           This is a simple RSA implementation in Haskell, that can be used to encrypt and decrypt messages.
+
+executable main-program
+  hs-source-dirs:      .
+  main-is:             Main.hs
+  other-modules:       RSA
+  build-depends:       base >=4.7 && <5
+  default-language:    Haskell2010
+
+test-suite rsa-test-suite
+  type:                exitcode-stdio-1.0
+  main-is:             Test.hs
+  other-modules:       RSA
+  build-depends:       base, QuickCheck
+  hs-source-dirs:      test, .
+  default-language:    Haskell2010
